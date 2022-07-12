@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join or Creating a Room</title>
+    <link rel="stylesheet" type="text/css" href="/css/meetings.css" />
+  </head>
+  <body>
+    <!--**************Header*****************-->
+
+    <header>
+      <nav>
+        <div class="nav-left">
+          <h1>
+            <a class="bttn3" href="/"><ion-icon name="tv"></ion-icon>Roomz</a>
+          </h1>
+        </div>
+        <div class="nav-right">
+          <ul>
+            <li>
+              <form action="/logout?_method=DELETE" method="POST">
+                <button type="submit" class="bttn2">Log Out</button>
+              </form>
+            </li>
+            <li>
+              <p class="wel">Welcome, <span><%= user.name %></span></p>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!--**************Meeting manage*****************-->
+    <section>
+      <div class="manage">
+        <div class="card left">
+          <img src="/img/white-new_meeting_W.png" alt="New Meeting" />
+          <a class="btn" id="mylink" href="/meeting/<%= user.id %>"
+            ><ion-icon name="videocam-outline"></ion-icon>New Meeting</a
+          >
+        </div>
+        <div class="card right">
+          <img src="/img/join_meeting.png" alt="Join Meeting" />
+          <form class="join">
+            <div class="form-group">
+              <input
+                type="text"
+                name="code"
+                class="form-style"
+                placeholder="Enter Code"
+                id="code"
+                autocomplete="off"
+              />
+              <ion-icon class="input-icon" name="pencil-outline"></ion-icon>
+            </div>
+            <div class="form-btn">
+              <button class="btn">
+                <ion-icon name="add-circle-outline"></ion-icon>Join Meeting
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!--**************Icons*****************-->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="/js/meeting.js"></script
+  </body>
+</html>

@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #c4c3ca;
+  background-color: #1f2029;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  text-decoration: none;
+  color: #c4c3ca;
+}
+
+/*------------------------------------------------*/
+/* Host */
+/*------------------------------------------------*/
+
+.container {
+  padding: 0 2.5%;
+}
+
+.row {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-1 {
+  flex-basis: 65%;
+}
+
+.col-2 {
+  flex-basis: 33%;
+}
+
+.host {
+  width: 90%;
+  border-radius: 15px;
+  margin-left: 50px;
+}
+
+/*------------------------------------------------*/
+/* Buttons */
+/*------------------------------------------------*/
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls button {
+  width: 40px;
+  margin: 20px 10px;
+  cursor: pointer;
+  transition: transform 0.4s;
+  background-color: transparent;
+  border-width: 0px;
+}
+
+.controls .call-icon {
+  color: rgb(172, 15, 15);
+}
+
+.controls .chat-icon {
+  color: rgb(153, 149, 149);
+}
+.controls .camera-icon {
+  color: rgb(40, 40, 131);
+}
+.controls button:hover {
+  transform: translateY(-10px);
+}
+
+
+/*------------------------------------------------*/
+/* Right Column Users */
+/*------------------------------------------------*/
+
+.joined {
+  background-color: #182842;
+  border-radius: 15px;
+  padding: 30px 40px 50px;
+  color: #fff;
+}
+#video-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-auto-rows: auto;
+  grid-gap : 20px;
+}
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 10px;
+  border-radius: 10%;
+}
+
+
+#mychat {
+  max-width: 600px;
+  margin: 30px auto;
+  border: 1px solid #ddd;
+  box-shadow: 1px 3px 5px rgba(0,0,0,0,05);
+  border-radius: 2px;
+  background-color: #f2f6f5;
+}
+
+h2{
+  font-size: 18px;
+  padding: 10px 20px;
+  color: #575ed8;
+}
+
+#chat-window{
+  height: 400px;
+  overflow: auto;
+  background: #f9f9f9;
+}
+
+#output p{
+  padding: 14px 0px;
+  margin: 0 20px;
+  border-bottom: 1px solid #e9e9e9;
+  color: #555;
+}
+
+#feedback p{
+  color: #aaa;
+  padding: 14px 0px;
+  margin: 0 20px;
+}
+
+#output strong{
+  color: #575ed8;
+}
+
+label{
+  box-sizing: border-box;
+  display: block;
+  padding: 10px 20px;
+}
+
+input{
+  padding: 10px 20px;
+  box-sizing: border-box;
+  background: #eee;
+  border: 0;
+  display: block;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  font-family: Nunito;
+  font-size: 16px;
+}
+#send{
+  background: #575ed8;
+  color: #fff;
+  font-size: 18px;
+  border: 0;
+  padding: 12px 0;
+  width: 100%;
+  border-radius: 0 0 2px 2px;
+}
+
+#myboard {
+  background-color: white;
+}

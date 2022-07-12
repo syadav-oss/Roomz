@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      const ROOM_ID = "<%= roomId %>"
+    </script>
+    <script defer src="https://unpkg.com/peerjs@1.4.5/dist/peerjs.min.js"></script>
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="/js/inMeet.js" defer></script>
+    <script src="https://kit.fontawesome.com/c4fae93b1a.js" crossorigin="anonymous"></script>
+    <title>Meet</title>
+    <link rel="stylesheet" type="text/css" href="/css/inMeet.css" />
+  </head>
+  <body>
+    <div hidden id="myboard">
+      <canvas id="canvas"></canvas>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-1">
+          <div id="video-grid" class="joined"></div>
+          <!-- <div class="host">HOst</div> -->
+          <div class="controls">
+            <button onclick="toggleChat()">
+              <i class="fa-solid fa-message fa-3x fa-beat chat-icon"></i>
+            </button>
+            <button onclick="disconnectCall()">
+              <i class="fa fa-close fa-5x fa-beat call-icon"></i>
+            </button>
+            <button onclick="toggleCamera()">
+              <i class="fa-solid fa-video fa-4x fa-beat camera-icon"></i>
+            </button>
+            <button onclick="toggleBoard()">
+                Whiteboard
+            </button>
+            <button onclick="toggleScreenshare()">
+                Share Screen
+            </button>
+          </div>
+        </div>
+        <div class="col-2">
+          <div hidden id="mychat">
+            <h2>ChatBox</h2>
+            <div id="chat-window">
+              <div id="output"></div>
+              <!-- <div id="feedback"></div> -->
+            </div>
+            <h3 id="handle"></h3>
+            <input id="message" type="text" placeholder="Message" />
+            <button id="send">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
